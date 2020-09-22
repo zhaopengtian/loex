@@ -1,0 +1,5 @@
+package com.loex.token;
+
+public class TokenInfo {
+    public static String token="eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ.5HUP/om754ZVK1Oeoyz90DAcqTd3/x0d7FcLo5mHDoe00GjYlG2TN4OuCPcRSXAap5pxPNj/qGle+eKfzP9hRiXOWyQQPKHyCjLXGV+hiXtsRnBsmCLbuGlBFHPjWSkGJaZaF26z3594H64o60zYZfG98sqbb5shF1GFScnhF3t8kWB5hNcXTXT0A6htaKMDS7K6DarP5jHilBDNs9SfmLTjxP74yF0avvw/3Ku+3yE=.nN1pIZpiVDTqRwBhX7MqHKh9Ow4BBtz8gqwX878xEHA";
+}

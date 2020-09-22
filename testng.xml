@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ApiTest" verbose="3" parallel="methods" thread-count="1">
+<!--    <parameter name="report.config" value="src/main/resources/config/report/extent-config.xml"></parameter>-->
+    <parameter name="system.info" value="com.loex.listener.MySystemInfo"></parameter>
+    <parameter name="ApiTestResult" value="133"></parameter>
+
+
+<!--    <test name="login">-->
+<!--        <classes>-->
+<!--            <class name="com.loex.tests.LoginTest">-->
+<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="loginTest"></include>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="aa"></include>&ndash;&gt;-->
+<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
+<!--            </class>-->
+
+<!--        </classes>-->
+
+<!--    </test>-->
+
+<!--    <test name="bibibuy">-->
+<!--    <classes>-->
+<!--        <class name="com.loex.tests.PostApiTest">-->
+<!--            <methods>-->
+<!--                &lt;!&ndash;                    <include name="logIn"/>&ndash;&gt;-->
+<!--                <include name="apiTest"></include>-->
+<!--                <include name="writeExcel"></include>-->
+
+<!--            </methods>-->
+<!--        </class>-->
+<!--    </classes>-->
+<!--</test>-->
+
+
+<!--    <test name="bibibuy">-->
+<!--        <classes>-->
+<!--            <class name="com.loex.tests.WebApiTests">-->
+<!--                <methods>-->
+
+<!--                    <include name="apiTest"></include>-->
+
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="productionEnv">-->
+<!--    <classes>-->
+<!--        <class name="com.loex.initialize.InitializeFile"/>-->
+<!--        <class name="com.loex.tests.WebApiTests">-->
+<!--            <methods>-->
+<!--                <include name="apiTest"></include>-->
+<!--            </methods>-->
+<!--        </class>-->
+<!--    </classes>-->
+<!--    </test>-->
+
+
+
+    <test name="testEnv">
+        <classes>
+            <class name="com.loex.tests.TestCase">
+                <methods>
+                    <include name="tt"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+<!--    <test name="bibibuy">-->
+<!--        <classes>-->
+<!--            <class name="com.loex.tests.ExcelData">-->
+<!--                <methods>-->
+<!--                    &lt;!&ndash;                    <include name="logIn"/>&ndash;&gt;-->
+<!--                    <include name="ss"></include>-->
+<!--                    &lt;!&ndash;                    <include name="test"></include>&ndash;&gt;-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="testcases">-->
+<!--        <classes>-->
+<!--            <class name="com.loex.tests.ExcelTest">-->
+<!--                <methods>-->
+<!--                    <include name="testAdd"></include>-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="indexend">-->
+<!--        <classes>-->
+<!--            <class name="com.buge.loex.ProInitialization">-->
+<!--            <methods>-->
+<!--                <include name="qiutd"></include>-->
+<!--            </methods>-->
+<!--               </class>-->
+
+<!--        </classes>-->
+
+<!--    </test>-->
+<!--    <test name="logout">-->
+<!--    <classes>-->
+<!--        <class name="com.loex.tests.LogOutTest">-->
+<!--        </class>-->
+<!--    </classes>-->
+<!--    </test>-->
+    <listeners>
+        <!--测试报告监听器-->
+<!--        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"></listener>-->
+        <listener class-name="com.loex.listener.ExtentTestNGIReporterListener"></listener>
+    </listeners>
+</suite>

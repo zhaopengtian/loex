@@ -1,0 +1,678 @@
+<html>
+<head>
+<title>TestNG:  productionEnv</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>productionEnv</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>109/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 14 15:34:37 CST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>118 seconds (118019 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=111, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/cancel, 测试结果=, 请求参数={"symbol": "lcpusdt","orderId":"获取正确创建订单的ID"}, 用例标题=订单取消_正确取消订单_返回code}</td>
+<td><div><pre>java.lang.AssertionError: expected [0] but found [非0]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.loex.tests.WebApiTests.apiTest(WebApiTests.java:364)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1683940888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1683940888'><pre>java.lang.AssertionError: expected [0] but found [非0]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.loex.tests.WebApiTests.apiTest(WebApiTests.java:364)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=2, 预期结果=非0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/books, 测试结果=, 请求参数=, 用例标题=盘口深度_空参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=3, 预期结果=非0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/books, 测试结果=, 请求参数=/wtpusdd, 用例标题=盘口深度_错误参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=4, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/books, 测试结果=, 请求参数=/wtpusdt, 用例标题=盘口深度_正确参数wtpusdt_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=5, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/books, 测试结果=, 请求参数=/btclcny, 用例标题=盘口深度_正确参数btclcny_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=6, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/books, 测试结果=, 请求参数=/yyceos, 用例标题=盘口深度_正确参数yyceos_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=7, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/books, 测试结果=, 请求参数=/poceth, 用例标题=盘口深度_正确参数poceth_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=8, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/books, 测试结果=, 请求参数=/ethbtc, 用例标题=盘口深度_正确参数ethbtc_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=9, 预期结果=非0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/tick/last, 测试结果=, 请求参数=, 用例标题=币对24h最新行情_空参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=10, 预期结果=非0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/tick/last, 测试结果=, 请求参数=/wtpusdd, 用例标题=币对24h最新行情_错误参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=11, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/tick/last, 测试结果=, 请求参数=/wtpusdt, 用例标题=币对24h最新行情_正确参数wtpusdt_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=12, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/tick/last, 测试结果=, 请求参数=/btclcny, 用例标题=币对24h最新行情_正确参数btclcny_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=13, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/tick/last, 测试结果=, 请求参数=/yyceos, 用例标题=币对24h最新行情_正确参数yyceos_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=14, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/tick/last, 测试结果=, 请求参数=/poceth, 用例标题=币对24h最新行情_正确参数poceth_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=15, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/tick/last, 测试结果=, 请求参数=/ethbtc, 用例标题=币对24h最新行情_正确参数ethbtc_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=16, 预期结果=非0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/check/hide, 测试结果=, 请求参数=/wtpusdt, 用例标题=检查隐藏币对是否显示_未登录_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=17, 预期结果=非0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/check/hide, 测试结果=, 请求参数=, 用例标题=检查隐藏币对是否显示_空参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=18, 预期结果=非0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/check/hide, 测试结果=, 请求参数=/wtpusdd, 用例标题=检查隐藏币对是否显示_错误参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=19, 预期结果={"msg":"操作成功","code":"0","data":false}, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/check/hide, 测试结果=, 请求参数=/mkreth, 用例标题=检查隐藏币对是否显示_正确参数无资产隐藏_返回全部}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=20, 预期结果={"msg":"操作成功","code":"0","data":false}, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/check/hide, 测试结果=, 请求参数=/vcsusdt, 用例标题=检查隐藏币对是否显示_正确参数无白名单隐藏_返回全部}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=21, 预期结果={"msg":"操作成功","code":"0","data":true}, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/check/hide, 测试结果=, 请求参数=/bnbbtc, 用例标题=检查隐藏币对是否显示_正确参数显示_返回全部}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=22, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/findMarketData, 测试结果=, 请求参数=, 用例标题=行情接口_无参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=23, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/rate/getCurrencyRate, 测试结果=, 请求参数=, 用例标题=app汇率接口_无参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=24, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/common/config, 测试结果=, 请求参数=, 用例标题=配置接口_无参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=25, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/rank/symbols, 测试结果=, 请求参数=, 用例标题=涨幅榜币对_无参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_行情接口, 序号=26, 预期结果=0, 请求方法=get, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/rank/turnover, 测试结果=, 请求参数=, 用例标题=成交榜币对_无参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=27, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "1", "side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=错误创建订单_未登录_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=28, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "1", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=错误创建限价订单_side为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=29, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "1", "side": "BUY", "price": "1", "volume": "2""}, 用例标题=错误创建限价订单_symbol为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=30, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "1", "side": "BUY", "volume": "2", "symbol": "lcpusdt"}, 用例标题=错误创建限价订单_price为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=31, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=错误创建限价订单_type为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=32, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "2", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=错误创建市价订单_side为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=33, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "2", "side": "BUY", "price": "1", "volume": "2""}, 用例标题=错误创建市价订单_symbol为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=34, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "2", "side": "BUY", "volume": "2", "symbol": "lcpusdt"}, 用例标题=正确创建市价订单_price为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=35, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "1", "side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=正确创建限价买单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=36, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "1", "side": "SELL", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=正确创建限价卖单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=37, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "2", "side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=正确创建市价买单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=38, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "2", "side": "SELL", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=正确创建市价卖单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=39, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "1", "side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1"}, 用例标题=错误创建止盈止损订单_未登录_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=40, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "1", "price": "1", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1}, 用例标题=错误创建止盈止损限价订单_side为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=41, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "1", "side": "BUY", "price": "1", "volume": "2","triggerPrice":"1}, 用例标题=错误创建止盈止损限价订单_symbol为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=42, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "1", "side": "BUY", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1}, 用例标题=错误创建止盈止损限价订单_price为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=43, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1}, 用例标题=错误创建止盈止损限价订单_type为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=44, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "1","side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=错误创建止盈止损限价订单_triggerPrice为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=45, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "2", "price": "1", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1"}, 用例标题=错误创建止盈止损市价订单_side为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=46, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "2", "side": "BUY", "price": "1", "volume": "2","triggerPrice":"1"}, 用例标题=错误创建止盈止损市价订单_symbol为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=47, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "2", "side": "BUY", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1"}, 用例标题=正确创建止盈止损市价订单_price为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=48, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "2", "side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=正确创建止盈止损市价订单_triggerPrice为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=49, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "1", "side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1"}, 用例标题=正确创建止盈止损限价买单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=50, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "1", "side": "SELL", "price": "1", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1"}, 用例标题=正确创建止盈止损限价卖单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=51, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "2", "side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1"}, 用例标题=正确创建止盈止损市价买单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=52, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop, 测试结果=, 请求参数={"type": "2", "side": "SELL", "price": "1", "volume": "2", "symbol": "lcpusdt","triggerPrice":"1"}, 用例标题=正确创建止盈止损市价卖单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=53, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/create, 测试结果=, 请求参数={"type": "1", "side": "BUY", "price": "1", "volume": "2", "symbol": "lcpusdt"}, 用例标题=正确创建订单_正确参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=54, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/trade/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt"}, 用例标题=成交记录_未登录_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=55, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/trade/list, 测试结果=, 请求参数=, 用例标题=成交记录_空参数_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=56, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/trade/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdd"}, 用例标题=成交记录_symbol错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=57, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/trade/list, 测试结果=, 请求参数={"page": "r", "pageSize": "1", "symbol": "lcpusdt"}, 用例标题=成交记录_page错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=58, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/trade/list, 测试结果=, 请求参数={"page": "1", "pageSize": "r", "symbol": "lcpusdt"}, 用例标题=成交记录_pageSize错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=59, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/trade/list, 测试结果=, 请求参数={"page": "1", "symbol": "lcpusdt"}, 用例标题=成交记录_pageSize为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=60, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/trade/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt"}, 用例标题=成交记录_正确参数1_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=61, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/trade/list, 测试结果=, 请求参数={"page": "2", "pageSize": "2", "symbol": "lcpusdt"}, 用例标题=成交记录_正确参数2_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=62, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=当前委托_未登录_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=63, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1","side":"BUY"}, 用例标题=当前委托_symbol为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=64, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=当前委托_page为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=65, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=当前委托_pageSize为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=66, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt"}, 用例标题=当前委托_side为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=67, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdd","side":"BUY"}, 用例标题=当前委托_symbol错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=68, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "r", "pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=当前委托_page错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=69, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "pageSize": "r", "symbol": "lcpusdt","side":"BUY"}, 用例标题=当前委托_pageSize错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=70, 预期结果={"msg":"操作成功","code":"0","data":{"count":0,"orderList":[]}}, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUYY"}, 用例标题=当前委托_side错误_返回全部}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=71, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=当前委托_正确参数1_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=72, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"SELL"}, 用例标题=当前委托_正确参数2_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=73, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/list, 测试结果=, 请求参数={"page": "2", "pageSize": "2", "symbol": "lcpusdt","side":"SELL"}, 用例标题=当前委托_正确参数3_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=74, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=历史委托_未登录_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=75, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "pageSize": "1","side":"BUY"}, 用例标题=历史委托_symbol为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=76, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=历史委托_page为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=77, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=历史委托_pageSize为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=78, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt"}, 用例标题=历史委托_side为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=79, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdd","side":"BUY"}, 用例标题=历史委托_symbol错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=80, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "r", "pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=历史委托_page错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=81, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "pageSize": "r", "symbol": "lcpusdt","side":"BUY"}, 用例标题=历史委托_pageSize错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=82, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUYY"}, 用例标题=历史委托_side错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=83, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=历史委托_正确参数1_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=84, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"SELL"}, 用例标题=历史委托_正确参数2_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=85, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/entrust/history, 测试结果=, 请求参数={"page": "2", "pageSize": "2", "symbol": "lcpusdt","side":"SELL"}, 用例标题=历史委托_正确参数3_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=86, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_未登录_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=87, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_symbol为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=88, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"pageSize": "1", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_page为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=89, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_pageSize为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=90, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","status":"0"}, 用例标题=止盈止损订单列表_side为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=91, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY"}, 用例标题=止盈止损订单列表_status为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=92, 预期结果={"msg":"操作成功","code":"0","data":{"count":0,"pageSize":1,"statusOptions":{"0":"未触发","1":"已触发","2":"已撤消"},"list":[]}}, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdd","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_symbol错误_返回全部}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=93, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "r", "pageSize": "1", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_page错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=94, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "r", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_pageSize错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=95, 预期结果={"msg":"操作成功","code":"0","data":{"count":0,"pageSize":1,"statusOptions":{"0":"未触发","1":"已触发","2":"已撤消"},"list":[]}}, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUYY","status":"0"}, 用例标题=止盈止损订单列表_side错误_返回全部}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=96, 预期结果={"msg":"操作成功","code":"0","data":{"count":0,"pageSize":1,"statusOptions":{"0":"未触发","1":"已触发","2":"已撤消"},"list":[]}}, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUYY","status":"3"}, 用例标题=止盈止损订单列表_status错误1_返回全部}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=97, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUYY","status":"r"}, 用例标题=止盈止损订单列表_status错误2_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=98, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_正确参数1_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=99, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY","status":"1"}, 用例标题=止盈止损订单列表_正确参数2_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=100, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY","status":"2"}, 用例标题=止盈止损订单列表_正确参数3_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=101, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"SELL","status":"0"}, 用例标题=止盈止损订单列表_正确参数4_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=102, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"SELL","status":"1"}, 用例标题=止盈止损订单列表_正确参数5_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=103, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"SELL","status":"2"}, 用例标题=止盈止损订单列表_正确参数6_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=104, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "2", "pageSize": "2", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=止盈止损订单列表_正确参数7_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=105, 预期结果=0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/stop/list, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"SELL","status":"0"}, 用例标题=止盈止损订单列表_正确参数8_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=106, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/cancel, 测试结果=, 请求参数={"page": "1", "pageSize": "1", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=订单取消_未登录_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=107, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/cancel, 测试结果=, 请求参数={"orderId": "获取正确创建订单的ID"}, 用例标题=订单取消_symbol为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=108, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/cancel, 测试结果=, 请求参数={"pageSize": "1", "symbol": "lcpusdt","side":"BUY","status":"0"}, 用例标题=订单取消_orderId为空_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=109, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/cancel, 测试结果=, 请求参数={"orderId": "获取正确创建订单的ID", "symbol": "lcpusdd}, 用例标题=订单取消_symbol错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+<tr>
+<td title='com.loex.tests.WebApiTests.apiTest()'><b>apiTest</b><br>Test class: com.loex.tests.WebApiTests<br>Parameters: {接口名称=币币交易_订单相关, 序号=110, 预期结果=非0, 请求方法=post, 请求URL=http://webapi.loex.abc/exchange-web-api/v1/order/cancel, 测试结果=, 请求参数={"symbol": "lcpusdt","orderId":"1000000000"}, 用例标题=订单取消_orderId错误_返回code}</td>
+<td></td>
+<td>1</td>
+<td>com.loex.tests.WebApiTests@737996a0</td></tr>
+</table><p>
+</body>
+</html>

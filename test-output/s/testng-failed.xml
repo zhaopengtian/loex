@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [s]">
+  <parameter name="jgg" value="133"/>
+  <test thread-count="5" verbose="3" name="bibibuy(failed)">
+    <classes>
+      <class name="com.loex.tests.WebApiTests">
+        <methods>
+          <include name="apiTest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- com.loex.tests.WebApiTests -->
+    </classes>
+  </test> <!-- bibibuy(failed) -->
+</suite> <!-- Failed suite [s] -->

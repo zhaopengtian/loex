@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [ApiTest]" parallel="methods">
+  <parameter name="system.info" value="com.loex.listener.MySystemInfo"/>
+  <parameter name="ApiTestResult" value="133"/>
+  <listeners>
+    <listener class-name="com.loex.listener.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test name="testEnv">
+    <classes>
+      <class name="com.loex.tests.TestCase">
+        <methods>
+          <include name="tt"/>
+        </methods>
+      </class> <!-- com.loex.tests.TestCase -->
+    </classes>
+  </test> <!-- testEnv -->
+</suite> <!-- Failed suite [ApiTest] -->
